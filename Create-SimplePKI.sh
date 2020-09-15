@@ -1,15 +1,16 @@
 #!/bin/bash
-# Basic script for setting up Simple PKI
+# Starter Script for setting up a simple PKI
+# CA -> CS
 
-# Download starter configs
-git clone https://github.com/rdbh/simple-pki.git
+# Download starter configuration
+echo -e "Downloading Files"
+git clone https://github.com/radawson/simple-pki.git
 cd simple-pki
 
-# Create root CA
-echo -e "Creating Root CA"
-sudo ca-create-rootca.sh
+#Create Root CA
+echo -e "\nCreating Root CA"
+ca-create-rootca.sh
 
-# Create Signing CA
-echo -e "Creating Signing CA"
-sudo ca-create-signingca.sh
-	
+#Create Signing CA
+echo -e "\nCreating Signing CA"
+ca-create-signingca.sh
